@@ -922,7 +922,7 @@
           <form id="enquiryForm" onsubmit="submitEnquiry(event)" novalidate>
 
             <div style="margin-bottom:14px;">
-              <label style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Full Name <span style="color:#c9a84c;">*</span></label>
+              <label for="eq-name" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Full Name <span style="color:#c9a84c;">*</span></label>
               <input type="text" id="eq-name" placeholder="E.g. Rahul Sharma" required
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;"
                 oninput="autoCapitalise(this)"
@@ -932,7 +932,7 @@
             </div>
 
             <div style="margin-bottom:14px;">
-              <label style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Phone Number <span style="color:#c9a84c;">*</span></label>
+              <label for="eq-phone" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Phone Number <span style="color:#c9a84c;">*</span></label>
               <input type="tel" id="eq-phone" placeholder="10-digit mobile number" required maxlength="10"
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;"
                 oninput="this.value=this.value.replace(/[^0-9]/g,'')"
@@ -942,7 +942,7 @@
             </div>
 
             <div style="margin-bottom:14px;">
-              <label style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Email Address <span style="color:#6b7280;font-weight:400;font-size:0.72rem;">(Optional)</span></label>
+              <label for="eq-email" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Email Address <span style="color:#6b7280;font-weight:400;font-size:0.72rem;">(Optional)</span></label>
               <input type="email" id="eq-email" placeholder="yourname@email.com"
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;"
                 onfocus="this.style.borderColor='#c9a84c'"
@@ -951,7 +951,7 @@
             </div>
 
             <div style="margin-bottom:14px;">
-              <label style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Service Required <span style="color:#c9a84c;">*</span></label>
+              <label for="eq-service" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Service Required <span style="color:#c9a84c;">*</span></label>
               <select id="eq-service" required
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;background:#fff;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 12 12%22><path fill=%22%236b7280%22 d=%22M6 8L1 3h10z%22/></svg>');background-repeat:no-repeat;background-position:right 12px center;"
                 onfocus="this.style.borderColor='#c9a84c'"
@@ -973,7 +973,7 @@
             </div>
 
             <div style="margin-bottom:14px;">
-              <label style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Preferred Office <span style="color:#c9a84c;">*</span></label>
+              <label for="eq-office" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Preferred Office <span style="color:#c9a84c;">*</span></label>
               <select id="eq-office" required
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;background:#fff;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 12 12%22><path fill=%22%236b7280%22 d=%22M6 8L1 3h10z%22/></svg>');background-repeat:no-repeat;background-position:right 12px center;"
                 onfocus="this.style.borderColor='#c9a84c'"
@@ -986,7 +986,7 @@
             </div>
 
             <div style="margin-bottom:18px;">
-              <label style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Your Message <span style="color:#6b7280;font-weight:400;font-size:0.72rem;">(Max 500 characters)</span></label>
+              <label for="eq-message" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Your Message <span style="color:#6b7280;font-weight:400;font-size:0.72rem;">(Max 500 characters)</span></label>
               <textarea id="eq-message" rows="4" maxlength="500" placeholder="Tell us briefly about your requirement..."
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;resize:vertical;"
                 onfocus="this.style.borderColor='#c9a84c'"
