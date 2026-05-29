@@ -202,7 +202,55 @@
       .section-inner { padding: 0; }
       .footer-inner { padding: 0 12px; }
     }
-  </style>
+
+/* ── ODELYA BACKLINK STRIP ── */
+.odelya-strip {
+  background: var(--light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 10px;
+  text-align: center;
+}
+.odelya-strip-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.odelya-strip-label {
+  font-size: 0.82rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+.odelya-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 16px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  transition: box-shadow .2s, border-color .2s;
+}
+.odelya-link:hover {
+  border-color: var(--gold);
+  box-shadow: 0 2px 10px rgba(201,168,76,0.18);
+  color: var(--gold);
+}
+.odelya-link img {
+  height: 18px;
+  width: auto;
+  display: block;
+}
+
+</style>
 
 <script type="application/ld+json">
   {
@@ -735,7 +783,29 @@ Registration, Investments, and all your compliance needs — just reach out.</p>
       <a href="contact.html" class="btn-navy">Contact Us Today</a>
     </div>
 
-  </main>
+<!-- ODELYA BACKLINK — Website & IT Services Credit -->
+<div class="odelya-strip" itemscope itemtype="https://schema.org/Organization">
+  <div class="odelya-strip-inner">
+    <span class="odelya-strip-label">Website Designed, Engineered &amp; Maintained by</span>
+    <a href="https://odelya.online"
+       class="odelya-link"
+       target="_blank"
+       rel="noopener"
+       aria-label="Odelya Management Pvt Ltd — IT Services, Cloud Storage and AI Education, Kolkata"
+       itemprop="url">
+      <img src="images/odelya-logo.webp"
+           alt="Odelya Management Pvt Ltd — IT Services Kolkata"
+           width="72"
+           height="18"
+           loading="lazy"
+           itemprop="logo"/>
+      <span itemprop="name">Odelya Management Pvt Ltd</span>
+    </a>
+    <span class="odelya-strip-label">— IT Services · Cloud Storage · AI Education · Kolkata</span>
+  </div>
+</div>
+
+</main>
 
   <!-- FOOTER — [UPDATE] phone, email, addresses -->
   <footer>
