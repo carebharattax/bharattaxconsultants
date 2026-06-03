@@ -33,35 +33,43 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy:#0d2137; --navy2:#163352; --gold:#c9a84c; --gold2:#e8c96a;
-      --white:#ffffff; --light:#f5f7fa; --gray:#6b7280; --text:#1e293b; --border:#dce3ed;
+      --navy:   #0d2137;
+      --navy2:  #163352;
+      --gold:   #FFA040;
+      --gold2:  #FFA040;
+      --white:  #ffffff;
+      --light:  #f5f7fa;
+      --gray:   #6b7280;
+      --text:   #1e293b;
+      --border: #dce3ed;
+
     }
     html { scroll-behavior: smooth; }
-    body { font-family:'DM Sans',sans-serif; color:var(--text); background:var(--white); min-height:100vh; display:flex; flex-direction:column; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); min-height: 100vh; display: flex; flex-direction: column; }
 
-    /* ── TOPBAR ── */
-    .topbar { background:var(--navy); color:#aec6df; font-size:0.82rem; padding:7px 0; }
-    .topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
-    .topbar a { color:var(--gold2); text-decoration:none; }
-    .topbar a:hover { text-decoration:underline; }
-    .topbar-left,.topbar-right { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+/* ── TOPBAR ── */
+.topbar { background: #FFA040; color: #000000; padding: 10px 0; border-bottom: 1px solid #E6A800; }
+.topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+.topbar a { color: #FFFFFF; text-decoration: none; font-size: 1rem; font-weight: 500; }
+.topbar a:hover { text-decoration: underline; color: #333333; }
+.topbar-left, .topbar-right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 1rem; font-weight: 600; color: #FFFFFF; }
 
     /* ── HEADER ── */
-    header { background:var(--white); border-bottom:2px solid var(--border); position:sticky; top:0; z-index:1000; box-shadow:0 2px 12px rgba(13,33,55,0.08); }
+    header { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(13,33,55,0.08); }
     .header-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
-    .logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
-    .logo-icon { width:48px; height:48px; background:var(--navy); border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--gold); font-weight:700; flex-shrink:0; }
-	.logo-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--navy); font-weight: 700; }
+    .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-icon { width: 48px; height: 48px; background: var(--navy); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+	.logo-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--navy); font-weight: 700; }
     .logo-text span { font-size: 0.72rem; color: #374151; letter-spacing: 0.04em; text-transform: uppercase; }
-    nav { display:flex; align-items:center; gap:4px; }
-    nav a { font-size:0.88rem; font-weight:500; color:var(--navy); text-decoration:none; padding:8px 14px; border-radius:6px; transition:background .2s,color .2s; white-space:nowrap; }
-    nav a:hover, nav a.active { background:var(--light); color:var(--gold); }
-    .dropdown { position:relative; }
-    .dropdown>a::after { content:' ▾'; font-size:0.7rem; }
-    .dropdown-menu { display:none; position:absolute; top:calc(100% + 8px); left:0; background:var(--white); border:1px solid var(--border); border-radius:10px; box-shadow:0 8px 30px rgba(13,33,55,0.12); min-width:230px; padding:8px 0; z-index:999; }
-    .dropdown:hover .dropdown-menu { display:block; }
-    .dropdown-menu a { display:block; padding:10px 20px; font-size:0.85rem; color:var(--text); border-left:3px solid transparent; border-radius:0; }
-    .dropdown-menu a:hover { background:var(--light); border-left-color:var(--gold); color:var(--navy); }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { font-size: 1rem; font-weight: 500; color: var(--navy); text-decoration: none; padding: 8px 14px; border-radius: 6px; transition: background 0.2s, color 0.2s; white-space: nowrap; }
+    nav a:hover, nav a.active { background: var(--light); color: var(--gold); }
+    .dropdown { position: relative; }
+    .dropdown > a::after { content: ' ▾'; font-size: 0.7rem; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: var(--white); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 30px rgba(13,33,55,0.12); min-width: 230px; padding: 8px 0; z-index: 999; }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 10px 20px; font-size: 1rem; color: var(--text); border-left: 3px solid transparent; border-radius: 0; }
+    .dropdown-menu a:hover { background: var(--light); border-left-color: var(--gold); color: var(--navy); }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; background:none; border:none; }
 	.hamburger span { display:block; width:24px; height:2px; background:var(--navy); border-radius:2px; transition:all .3s; }
     .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
@@ -69,9 +77,9 @@
     .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
 	.mobile-nav { display:none; background:var(--white); border-top:1px solid var(--border); padding:12px 24px 20px; max-height:320px; overflow-y:auto; }
     .mobile-nav.open { display:block; }
-    .mobile-nav a { display:block; padding:11px 0; font-size:0.92rem; font-weight:500; color:var(--navy); text-decoration:none; border-bottom:1px solid var(--border); }
-    .mobile-nav a:last-child { border-bottom:none; }
-    .mobile-nav a:hover { color:var(--gold); }
+    .mobile-nav a { display: block; padding: 11px 0; font-size: 0.92rem; font-weight: 500; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--border); }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--gold); }
 
     /* ── BREADCRUMB ── */
     .breadcrumb-bar { background:var(--light); border-bottom:1px solid var(--border); padding:10px 0; }
@@ -82,28 +90,29 @@
     .breadcrumb-inner .current { color:var(--gold); font-weight:600; }
 
     /* ── PAGE HERO ── */
-    .page-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#1a4a7a 100%); padding:28px 16px 24px; position:relative; overflow:hidden; }
-    .page-hero::before { content:''; position:absolute; right:-80px; top:-80px; width:360px; height:360px; border-radius:50%; background:rgba(201,168,76,0.07); }
-    .page-hero-inner { max-width:100%; margin:0 auto; position:relative; z-index:1; }
-    .page-hero-tag { display:inline-block; background:rgba(201,168,76,0.18); color:var(--gold2); font-size:0.78rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:5px 14px; border-radius:20px; margin-bottom:16px; border:1px solid rgba(201,168,76,0.3); }
-    .page-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); color:var(--white); font-weight:700; margin-bottom:14px; line-height:1.2; }
-    .page-hero h1 span { color:var(--gold2); }
-    .page-hero p { font-size:1.05rem; color:#aec6df; max-width:100%; line-height:1.7; }
+    .hero { background: #F8F8F8; padding:28px 16px 24px; position:relative; overflow:hidden; }
+    .hero::before { display: none; }
+    .hero-inner { max-width:100%; margin:0 auto; position:relative; z-index:1; }
+    .hero-tag { display:inline-block; background:#FFFFFF; color:var(--gold2); font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:5px 14px; border-radius:20px; margin-bottom:16px; border:3px solid #FFA040; display: block; text-align: center; width: fit-content; margin-left: auto; margin-right: auto; }
+    .hero h1 { font-family:'Playfair Display',serif; color: #000000; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:700; margin-bottom:14px; line-height:1.2; }
+    .hero h1 span { color:var(--gold2);  color: #FFA040; }
+    .hero p { font-size:1.05rem; color:#000000; max-width:100%; line-height:1.7; }
 
     /* ── GENERAL SECTION ── */
-    .section {background:var(--light); padding:25px 10px;}
+    .section { padding: 40px 16px; }
     .section-inner { max-width: 100%; margin: auto; padding: 0; }
-    .section-tag { display:inline-block; background:rgba(201,168,76,0.12); color:var(--gold); font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:5px 14px; border-radius:20px; margin-bottom:12px; border:1px solid rgba(201,168,76,0.25); }
+    .section-tag { display: inline-block; background: #FFFFFF; color: #FFA040; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 14px; border: 3px solid #FFA040; display: block; text-align: center; width: fit-content; margin-left: auto; margin-right: auto; }
     h2.section-title { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2rem); color:var(--navy); margin-bottom:14px; }
     p.section-sub { color:var(--gray); font-size:1.05rem; line-height:1.8; margin-bottom:16px; }
 
+
     /* ── OUR STORY ── */
     .hero-stats { display: grid; grid-template-columns: 1fr; gap: 16px; }
-    .stat-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 24px 16px; text-align: center; backdrop-filter: blur(4px); }
+    .stat-card { background: rgba(0,0,0,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 24px 16px; text-align: center; backdrop-filter: blur(4px); }
 	.stat-card .num { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--gold2); font-weight: 700; display: block; }
     .stat-card .label { font-size: 0.88rem; color: #c8dff0; margin-top: 6px; line-height: 1.4; }
     .story-grid { max-width: 100%; margin: auto; padding: 0; display: grid; grid-template-columns: 1.8fr 0.4fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
-    .story-content p { color:#4b5563; font-size:1.05rem; line-height:1.8; margin-bottom:14px; }
+	.story-content p { color:#4b5563; font-size:1.05rem; line-height:1.8; margin-bottom:14px; }
     .story-highlights { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px; }
     .highlight-box { background:var(--light); border:1px solid var(--border); border-radius:10px; padding:20px 16px; text-align:center; }
     .highlight-box .num { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--navy); font-weight:700; display:block; }
@@ -125,19 +134,22 @@
     /* ── OFFICE LOCATIONS ── */
 .offices-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:40px; }
 .office-card { border-radius:16px; padding:40px 10px; }
-.office-card.main { outline: 3px solid var(--navy); outline-offset: 1px; }
-.office-card.main { background:var(--white); border:2px solid var(--border); color:var(--text); }
-.office-card.branch { background:var(--navy); color:var(--white); }
+.office-card.main { background:var(--white); outline: 3px solid #000000; outline-offset: 1px; background:var(--white); }
+.office-card.branch { background:#FFD0A8; outline: 3px solid #000000;}
 .office-badge { display:inline-block; font-size:0.72rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:4px 12px; border-radius:20px; margin-bottom:18px; }
-.office-card.main .office-badge { background:var(--light); color:var(--navy); border:1px solid var(--border); }
-.office-card.branch .office-badge { background:rgba(201,168,76,0.2); color:var(--gold2); border:1px solid rgba(201,168,76,0.35); }
+.office-card.main .office-badge { background:#000000; color:#FFFFFF; font-size:0.95rem; border:1px solid var(--border); }
+.office-card.branch .office-badge { background:#000000; color:#FFFFFF; font-size:0.95rem; border:1px solid rgba(201,168,76,0.35); }
 .office-card h3 { font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:20px; }
 .office-card.main h3 { color:var(--navy); }
-.office-card.branch h3 { color:var(--white); }
+.office-card.branch h3 { color:#000000; }
 .office-detail { display:flex; align-items:flex-start; gap:10px; margin-bottom:12px; font-size:1.05rem; line-height:1.5; }
 .office-card.main .office-detail { color:#4b5563; }
-.office-card.branch .office-detail { color:#93c5fd; }
+.office-card.branch .office-detail { color:#000000; }
 .office-detail strong { flex-shrink:0; }
+.office-card.main .office-detail a,
+.office-card.branch .office-detail a { color: #000000; text-decoration: none; }
+.office-card.main .office-detail a:hover,
+.office-card.branch .office-detail a:hover { text-decoration: none; }
 
     /* ── VALUES ── */
     .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:40px; }
@@ -154,46 +166,50 @@
     .btn-navy:hover { background:var(--navy2); transform:translateY(-2px); }
 
     /* ── FOOTER ── */
-    footer { background:var(--navy); color:#aec6df; padding:60px 0 0; margin-top:auto; }
+    footer { background: #222222; color: #aec6df; padding: 60px 0 0; margin-top: auto; }
     .footer-inner { max-width: 100%; margin: auto; padding: 0 40px; display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px; }
-    .footer-brand .logo-icon { background:var(--navy2); margin-bottom:16px; }
-    .footer-brand p { font-size:0.88rem; line-height:1.7; color:#8aafc9; margin-top:12px; }
-    .footer-brand strong { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--white); }
-    .footer-col h3 { font-family:'Playfair Display',serif; font-size:1rem; color:var(--white); margin-bottom:18px; padding-bottom:10px; border-bottom:1px solid var(--navy2); }
-    .footer-col ul { list-style:none; }
-    .footer-col ul li { margin-bottom:10px; }
-    .footer-col ul li a { color:#8aafc9; text-decoration:none; font-size:0.86rem; transition:color .2s; display:flex; align-items:center; gap:6px; }
-    .footer-col ul li a::before { content:'›'; color:var(--gold); font-size:1rem; }
-    .footer-col ul li a:hover { color:var(--gold2); }
-    .footer-contact p { font-size:0.86rem; color:#8aafc9; margin-bottom:10px; display:flex; align-items:flex-start; gap:10px; line-height:1.5; }
-    .footer-contact p strong { color:var(--gold2); min-width:16px; }
-    .footer-office-tag { display:inline-block; background:var(--gold); color:var(--navy); font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:20px; margin-bottom:8px; letter-spacing:0.05em; text-transform:uppercase; }
+    .footer-brand .logo-icon { background: var(--navy2); margin-bottom: 16px; }
+    .footer-brand p { font-size: 1rem; line-height: 1.7; color: #FFFFFF; margin-top: 12px; }
+    .footer-brand strong { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #FFA040; }
+    .footer-col h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #FFA040; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--navy2); }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: #FFFFFF; text-decoration: none; font-size: 1rem; transition: color 0.2s; display: flex; align-items: center; gap: 6px; }
+    .footer-col ul li a::before { content: '›'; color: var(--gold); font-size: 1rem; }
+    .footer-col ul li a:hover { color: var(--gold2); }
+    .footer-contact p { font-size: 1rem; color: #FFFFFF; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+    .footer-contact p strong { color: var(--gold2); min-width: 16px; }
+    .footer-office-tag { display: inline-block; background: #FFFFFF; color: var(--navy); font-size: 0.9rem; font-weight: 600; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
     .footer-bottom { margin-top: 48px; border-top: 1px solid var(--navy2); padding: 18px 24px; text-align: center; font-size: 0.8rem; color: #8aafc9; }
 
     /* ── RESPONSIVE ── */
     @media (max-width:900px) {
-      nav { display:none; } .hamburger { display:flex; }
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; }
       .hero-stats { grid-template-columns: repeat(3,1fr); }
 	  .story-grid { grid-template-columns:1fr; }
       .team-grid { grid-template-columns:1fr; }
       .offices-grid { grid-template-columns:1fr; }
       .values-grid { grid-template-columns:1fr 1fr; }
-      .footer-inner { grid-template-columns:1fr 1fr; gap:32px; }
-	  .topbar-inner { padding: 0 12px; }
-      .header-inner { padding: 0 12px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; padding: 0 16px; }
+	  .topbar-inner { padding: 0 16px; }
+      .header-inner { padding: 0 16px; }
+      .hero-inner { padding: 0 16px; }
       .section-inner { padding: 0; }
-      .footer-inner { padding: 0 12px; }
     }
     @media (max-width:560px) {
-      .values-grid { grid-template-columns:1fr; }
+      .hero { padding: 28px 4px 24px; }
+	  .values-grid { grid-template-columns:1fr; }
       .hero-stats { grid-template-columns: repeat(3, 1fr); }
 	  .story-highlights { grid-template-columns:1fr 1fr; }
-      .footer-inner { grid-template-columns:1fr; }
-      .topbar-right { display:none; }
+      .footer-inner { grid-template-columns: 1fr; padding: 0 12px; }
+      .topbar-inner { flex-direction: column; text-align: center; }
+	  .topbar-left, .topbar-right { display: flex; justify-content: center; }
 	  .topbar-inner { padding: 0 12px; }
       .header-inner { padding: 0 12px; }
+      .hero-inner { padding: 0 6px; }
       .section-inner { padding: 0; }
-      .footer-inner { padding: 0 12px; }
     }
 
 /* ── ODELYA BACKLINK STRIP ── */
@@ -241,6 +257,76 @@
   height: 18px;
   width: auto;
   display: block;
+}
+
+.dropdown-sub {
+  position: relative;
+}
+
+.dropdown-sub .sub-toggle {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.dropdown-sub .sub-toggle:hover {
+  background: var(--light);
+  color: var(--gold);
+}
+
+.dropdown-sub .submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(13,33,55,0.12);
+  min-width: 220px;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.dropdown-sub .submenu a {
+  display: block;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-sub .submenu a:hover {
+  background: var(--light);
+  color: var(--gold);
+}
+
+.dropdown-sub:hover .submenu {
+  display: block;
+}
+
+.mobile-dropdown .mobile-submenu-level1 {
+  display: none;
+  padding-left: 30px;
+}
+
+.mobile-dropdown .mobile-submenu-level1.open {
+  display: block;
+}
+
+.mobile-dropdown-sub .mobile-submenu-level2 {
+  display: none;
+  padding-left: 30px;
+}
+
+.mobile-dropdown-sub .mobile-submenu-level2.open {
+  display: block;
+}
+
+.mobile-dropdown-toggle, .mobile-sub-toggle {
+  cursor: pointer;
 }
 
 </style>
@@ -522,32 +608,87 @@
   <!-- HEADER -->
   <header>
     <div class="header-inner">
-      <a href="/" class="logo">
-        <img src="images/btc-logo.webp" alt="Bharat Tax Consultants Logo - CA Firm in Ranihati, Howrah, West Bengal" style="height:44px; width:auto; margin-bottom:12px; display:block;"/>
-        <div class="logo-text">
-          <strong>Bharat Tax Consultants</strong>
-          <span>Tax · GST · Accounting · Compliance</span>
-        </div>
-      </a>
+<a href="/" class="logo">
+  <img src="images/btc-logo.webp" alt="Bharat Tax Consultants Logo - Professional Tax and GST Services in Ranihati, Howrah, West Bengal" style="height:50px; width:auto;"/>
+  <div class="logo-text">
+    <strong>Bharat Tax Consultants</strong>
+    <span>Tax · GST · Accounting · Compliance</span>
+  </div>
+</a>
       <nav>
         <a href="/">Home</a>
         <a href="about.html" class="active">About Us</a>
-        <div class="dropdown">
-          <a href="#">Our Services</a>
-		  <div class="dropdown-menu">
-            <a href="gst-registration.html">GST Registration</a>
-            <a href="gst-return-filing.html">GST Return Filing</a>
-            <a href="income-tax-return.html">Income Tax Return</a>
-            <a href="tds-return.html">TDS Return</a>
-            <a href="company-registration.html">Company Registration</a>
-            <a href="partnership-registration.html">Partnership Registration</a>
-            <a href="accounting.html">Accounting Services</a>
-            <a href="trademark-registration.html">Trademark Registration</a>
-            <a href="food-license.html">Food License (FSSAI)</a>
-			<a href="mutual-fund.html">Mutual Fund Investment</a>
-			<a href="stock-market.html">Stock Market & Commodity</a>
-          </div>
-        </div>
+<div class="dropdown">
+  <a href="#">Our Services</a>
+  <div class="dropdown-menu">
+    
+    <div class="dropdown-sub">
+      <a href="#" class="sub-toggle">Registration ▶</a>
+      <div class="submenu">
+        <a href="gst-registration.html">GST Registration</a>
+        <a href="tds-return.html">TDS/TCS Return</a>
+        <a href="company-registration.html">LLP Company Formation</a>
+        <a href="partnership-registration.html">Farm Registration</a>
+		<a href="partnership-registration.html">Society Registration</a>
+		<a href="partnership-registration.html">Trust Registration</a>
+        <a href="trademark-registration.html">Trademark Registration</a>
+        <a href="food-license.html">Food License (FSSAI)</a>
+		<a href="food-license.html">P-Tax / Trade License</a>
+      </div>
+    </div>
+    
+    <div class="dropdown-sub">
+      <a href="#" class="sub-toggle">Compliances ▶</a>
+      <div class="submenu">
+        <a href="gst-return-filing.html">GST Return Filing</a>
+        <a href="income-tax-return.html">Income Tax Return</a>
+      </div>
+    </div>
+
+    <div class="dropdown-sub">
+      <a href="#" class="sub-toggle">Appeal ▶</a>
+      <div class="submenu">
+        <a href="gst-return-filing.html">GST Return Filing</a>
+        <a href="income-tax-return.html">Income Tax Return</a>
+      </div>
+    </div>
+
+    <div class="dropdown-sub">
+      <a href="#" class="sub-toggle">Audit ▶</a>
+      <div class="submenu">
+        <a href="gst-return-filing.html">Company</a>
+		<a href="gst-return-filing.html">LLP</a>
+        <a href="income-tax-return.html">Income Tax</a>
+        <a href="accounting.html">GST</a>
+      </div>
+    </div>
+
+    <div class="dropdown-sub">
+      <a href="#" class="sub-toggle">Accounting ▶</a>
+      <div class="submenu">
+        <a href="accounting.html">Accounting Services</a>
+      </div>
+    </div>
+    
+    <div class="dropdown-sub">
+      <a href="#" class="sub-toggle">Investments ▶</a>
+      <div class="submenu">
+        <a href="mutual-fund.html">Mutual Fund</a>
+        <a href="stock-market.html">Stock Market</a>
+      </div>
+    </div>
+
+    <div class="dropdown-sub">
+      <a href="#" class="sub-toggle">Other Services ▶</a>
+      <div class="submenu">
+        <a href="gst-return-filing.html">DSC</a>
+        <a href="income-tax-return.html">Loan Apprisal</a>
+        <a href="accounting.html">Financial Project Report</a>
+      </div>
+    </div>
+    
+  </div>
+</div>
         <a href="contact.html">Contact Us</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -555,21 +696,83 @@
       </button>
     </div>
 <div class="mobile-nav" id="mobileNav">
-      <a href="/">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="gst-registration.html">GST Registration</a>
-      <a href="gst-return-filing.html">GST Return Filing</a>
-      <a href="income-tax-return.html">Income Tax Return</a>
-      <a href="tds-return.html">TDS Return</a>
-      <a href="company-registration.html">Company Registration</a>
-      <a href="partnership-registration.html">Partnership Registration</a>
-      <a href="accounting.html">Accounting Services</a>
-      <a href="trademark-registration.html">Trademark Registration</a>
-      <a href="food-license.html">Food License (FSSAI)</a>
-	  <a href="mutual-fund.html">Mutual Fund Investment</a>
-	  <a href="stock-market.html">Stock Market & Commodity</a>
-      <a href="contact.html">Contact Us</a>
+  <a href="/">Home</a>
+  <a href="about.html">About Us</a>
+  
+  <div class="mobile-dropdown">
+    <a href="#" class="mobile-dropdown-toggle">Our Services ▼</a>
+    <div class="mobile-submenu-level1">
+      
+      <div class="mobile-dropdown-sub">
+        <a href="#" class="mobile-sub-toggle">Registration ▶</a>
+        <div class="mobile-submenu-level2">
+        <a href="gst-registration.html">GST Registration</a>
+        <a href="tds-return.html">TDS/TCS Return</a>
+        <a href="company-registration.html">LLP Company Formation</a>
+        <a href="partnership-registration.html">Farm Registration</a>
+		<a href="partnership-registration.html">Society Registration</a>
+		<a href="partnership-registration.html">Trust Registration</a>
+        <a href="trademark-registration.html">Trademark Registration</a>
+        <a href="food-license.html">Food License (FSSAI)</a>
+		<a href="food-license.html">P-Tax / Trade License</a>
+        </div>
+      </div>
+      
+      <div class="mobile-dropdown-sub">
+        <a href="#" class="mobile-sub-toggle">Compliances ▶</a>
+        <div class="mobile-submenu-level2">
+        <a href="gst-return-filing.html">GST Return Filing</a>
+        <a href="income-tax-return.html">Income Tax Return</a>
+        </div>
+      </div>
+
+      <div class="mobile-dropdown-sub">
+        <a href="#" class="mobile-sub-toggle">Appeal ▶</a>
+        <div class="mobile-submenu-level2">
+        <a href="gst-return-filing.html">GST Return Filing</a>
+        <a href="income-tax-return.html">Income Tax Return</a>
+        </div>
+      </div>
+
+      <div class="mobile-dropdown-sub">
+        <a href="#" class="mobile-sub-toggle">Audit ▶</a>
+        <div class="mobile-submenu-level2">
+        <a href="gst-return-filing.html">Company</a>
+		<a href="gst-return-filing.html">LLP</a>
+        <a href="income-tax-return.html">Income Tax</a>
+        <a href="accounting.html">GST</a>
+        </div>
+      </div>
+
+      <div class="mobile-dropdown-sub">
+        <a href="#" class="mobile-sub-toggle">Accounting ▶</a>
+        <div class="mobile-submenu-level2">
+          <a href="accounting.html">Accounting Services</a>
+        </div>
+      </div>
+      
+      <div class="mobile-dropdown-sub">
+        <a href="#" class="mobile-sub-toggle">Investments ▶</a>
+        <div class="mobile-submenu-level2">
+        <a href="mutual-fund.html">Mutual Fund</a>
+        <a href="stock-market.html">Stock Market</a>
+        </div>
+      </div>
+
+      <div class="mobile-dropdown-sub">
+        <a href="#" class="mobile-sub-toggle">Other Services ▶</a>
+        <div class="mobile-submenu-level2">
+        <a href="gst-return-filing.html">DSC</a>
+        <a href="income-tax-return.html">Loan Apprisal</a>
+        <a href="accounting.html">Financial Project Report</a>
+        </div>
+      </div>
+      
     </div>
+  </div>
+  
+  <a href="contact.html">Contact Us</a>
+</div>
   </header>
 
   <main>
@@ -584,9 +787,9 @@
     </div>
 
     <!-- PAGE HERO — [UPDATE] paragraph text -->
-    <div class="page-hero">
-      <div class="page-hero-inner">
-        <div class="page-hero-tag">Who We Are</div>
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="hero-tag">Who We Are</div>
         <h1>About <span>Bharat Tax Consultants </span>Ranihati Howrah West Bengal</h1>
         <p>Bharat Tax Consultants is a trusted tax and financial 
 advisory firm serving individuals and businesses across 
@@ -605,7 +808,7 @@ and smart investment solutions.</p>
       <div class="section-inner">
         <div class="story-grid">
           <div class="story-content">
-            <div class="section-tag">Our Story</div>
+
             <h2 class="section-title">Building Trust, One Client at a Time</h2>
 <p>Bharat Tax Consultants was established with a singular vision — to make professional
 tax and financial advisory services accessible, affordable, and trustworthy for every
@@ -802,7 +1005,7 @@ Registration, Investments, and all your compliance needs — just reach out.</p>
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="images/btc-logo.webp" alt="Bharat Tax Consultants Logo" style="height:44px; width:auto; margin-bottom:12px; display:block;"/>
+        <img src="images/btc-logo.webp" alt="Bharat Tax Consultants Logo" style="height:60px; width:auto; margin-bottom:12px; display:block;"/>
         <strong>Bharat Tax Consultants</strong>
         <p>Your trusted partner for Income Tax, GST, Accounting, and Business Compliance services across Howrah and Kolkata.</p>
       </div>
@@ -835,14 +1038,14 @@ Registration, Investments, and all your compliance needs — just reach out.</p>
         <span class="footer-office-tag">Administrative Office</span>
         <p><strong>📍</strong> 44E, Nandalal Mitra Lane, 2nd Floor, Kolkata, West Bengal-700040</p>
         <p><strong>👤</strong> Shyamal Sen</p>
-        <p><strong>📞</strong> <a href="tel:+91-9874295005" style="color:#8aafc9;text-decoration:none;">+91-9874295005</a></p>
-        <p><strong>✉</strong> <a href="mailto:shyamalsen@gmail.com" style="color:#8aafc9;text-decoration:none;">shyamalsen@gmail.com</a></p>		
+        <p><strong>📞</strong> <a href="tel:+91-9874295005" style="color:#FFFFFF;text-decoration:none;">+91-9874295005</a></p>
+        <p><strong>✉</strong> <a href="mailto:shyamalsen@gmail.com" style="color:#FFFFFF;text-decoration:none;">shyamalsen@gmail.com</a></p>		
         <br/>
         <span class="footer-office-tag">Branch Office</span>
         <p><strong>📍</strong> Room No 4, 2nd Floor, Aashirbad Complex, Ranihati, Nabghara, Biki Hakola, Howrah, West Bengal-711322</p>
         <p><strong>👤</strong> Manish Sau</p>
-        <p><strong>📞</strong> <a href="tel:+91-8100180080" style="color:#8aafc9;text-decoration:none;">+91-8100180080</a></p>
-        <p><strong>✉</strong> <a href="mailto:care.bharattax@gmail.com" style="color:#8aafc9;text-decoration:none;">care.bharattax@gmail.com</a></p>		
+        <p><strong>📞</strong> <a href="tel:+91-8100180080" style="color:#FFFFFF;text-decoration:none;">+91-8100180080</a></p>
+        <p><strong>✉</strong> <a href="mailto:care.bharattax@gmail.com" style="color:#FFFFFF;text-decoration:none;">care.bharattax@gmail.com</a></p>		
         <br/>
       </div>
     </div>
@@ -860,17 +1063,65 @@ Registration, Investments, and all your compliance needs — just reach out.</p>
   </footer>
 
   <script>
-	const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    hamburger.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-      hamburger.classList.toggle('open');
-    });
-    mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      hamburger.classList.remove('open');
-    }));
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+hamburger.addEventListener('click', () => {
+  mobileNav.classList.toggle('open');
+  hamburger.classList.toggle('open');
+});
+
+mobileNav.querySelectorAll('a:not(.mobile-dropdown-toggle):not(.mobile-sub-toggle)').forEach(l => l.addEventListener('click', () => {
+  mobileNav.classList.remove('open');
+  hamburger.classList.remove('open');
+}));
+
+// Mobile level 1 toggle (Our Services)
+document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const parent = toggle.closest('.mobile-dropdown');
+    const submenu = parent.querySelector('.mobile-submenu-level1');
+    submenu.classList.toggle('open');
+  });
+});
+
+// Mobile level 2 toggle (Registration, Compliances, etc.)
+document.querySelectorAll('.mobile-sub-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const parent = toggle.closest('.mobile-dropdown-sub');
+    const submenu = parent.querySelector('.mobile-submenu-level2');
+    submenu.classList.toggle('open');
+  });
+});
   </script>
+
+<script>
+// Smart submenu positioning
+const subToggles = document.querySelectorAll('.dropdown-sub');
+
+subToggles.forEach(toggle => {
+  const submenu = toggle.querySelector('.submenu');
+  
+  toggle.addEventListener('mouseenter', () => {
+    const rect = toggle.getBoundingClientRect();
+    const submenuRect = submenu.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    
+    // Position based on available space
+    if (rect.right + submenuRect.width > viewportWidth) {
+      // Not enough space on right - open on left
+      submenu.style.left = 'auto';
+      submenu.style.right = '100%';
+    } else {
+      // Enough space on right - open normally
+      submenu.style.left = '100%';
+      submenu.style.right = 'auto';
+    }
+  });
+});
+</script>
 
 </body>
 </html>
