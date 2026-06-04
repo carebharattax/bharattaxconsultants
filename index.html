@@ -51,9 +51,9 @@
 /* ── TOPBAR ── */
 .topbar { background: #FFA040; color: #000000; padding: 10px 0; border-bottom: 1px solid #E6A800; }
 .topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
-.topbar a { color: #FFFFFF; text-decoration: none; font-size: 1.2rem; font-weight: 600; }
+.topbar a { color: #FFFFFF; font-size: 1rem; font-weight: 500; }
 .topbar a:hover { text-decoration: none; color: #333333; }
-.topbar-left, .topbar-right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 1.2rem; font-weight: 600; color: #FFFFFF; }
+.topbar-left, .topbar-right { display: flex; gap: 30px; align-items: center; flex-wrap: wrap; font-size: 1rem; font-weight: 600; color: #FFFFFF; }
 
     /* ── HEADER ── */
     header { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(13,33,55,0.08); }
@@ -184,9 +184,9 @@
       .why-grid { grid-template-columns: repeat(3, 1fr); }
       .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
       .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; padding: 0 16px; }
-	  .topbar a { font-size: 1rem; font-weight: 500; }
+	  .topbar a { font-size: 0.8rem; font-weight: 500; }
 	  .topbar a:hover { text-decoration: none; color: #333333; }
-	  .topbar-left, .topbar-right { display: flex; justify-content: center; }
+	  .topbar-left, .topbar-right { display: flex; justify-content: center; font-size: 1rem; font-weight: 500; }
       .topbar-inner { padding: 0 12px; flex-direction: column; text-align: center; }
       .header-inner { padding: 0 16px; }
       .section-inner { padding: 0; }
@@ -200,9 +200,9 @@
       .hero-stats { grid-template-columns: repeat(3, 1fr); }
 	  .testimonials-grid { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; padding: 0 12px; }
-	  .topbar a { font-size: 1rem; font-weight: 500; }
+	  .topbar a { font-size: 0.8rem; font-weight: 500; }
 	  .topbar a:hover { text-decoration: none; color: #333333; }
-	  .topbar-left, .topbar-right { display: flex; justify-content: center; }
+	  .topbar-left, .topbar-right { display: flex; justify-content: center; font-size: 1rem; font-weight: 500; }
       .topbar-inner { padding: 0 12px; flex-direction: column; text-align: center; }
       .header-inner { padding: 0 12px; }
       .hero-inner { padding: 0 6px; }
@@ -695,14 +695,13 @@
        TOP BAR
        [UPDATE] Phone number and email
        ══════════════════════════════════════ -->
-  <div class="topbar">
+<div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-left">
-        <span>📍 Office: Kolkata &amp; Howrah</span>
+        <span>Office: Kolkata &amp; Howrah</span>
       </div>
       <div class="topbar-right">
-		<span>📞 <a href="tel:+918100180080">+91-8100180080</a></span>
-		<span>✉ <a href="mailto:care.bharattax@gmail.com">care.bharattax@gmail.com</a></span>
+		<span>Ph: +91-8100180080</span>
       </div>
     </div>
   </div>
@@ -999,7 +998,7 @@ all under one roof in Howrah.</p>
           </a>
           <a href="stock-market.html" class="service-card">
             <span class="icon">💹</span>
-            <h3>Stock Market & Commodity</h3>
+            <h3>Stock Market Investment</h3>
             <p>Professional advisory on stock market investments, exchange traded funds and commodity trading to help you build a diversified and balanced investment portfolio.</p>
             <span class="link">Know More →</span>
           </a>
