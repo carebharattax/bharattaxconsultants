@@ -33,35 +33,43 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy:#0d2137; --navy2:#163352; --gold:#c9a84c; --gold2:#e8c96a;
-      --white:#ffffff; --light:#f5f7fa; --gray:#6b7280; --text:#1e293b; --border:#dce3ed;
+      --navy:   #0d2137;
+      --navy2:  #163352;
+      --gold:   #FFA040;
+      --gold2:  #FFA040;
+      --white:  #ffffff;
+      --light:  #f5f7fa;
+      --gray:   #6b7280;
+      --text:   #1e293b;
+      --border: #dce3ed;
+
     }
     html { scroll-behavior: smooth; }
-    body { font-family:'DM Sans',sans-serif; color:var(--text); background:var(--white); min-height:100vh; display:flex; flex-direction:column; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); min-height: 100vh; display: flex; flex-direction: column; }
 
     /* ── TOPBAR ── */
-    .topbar { background:var(--navy); color:#aec6df; font-size:0.82rem; padding:7px 0; }
-    .topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
-    .topbar a { color:var(--gold2); text-decoration:none; }
-    .topbar a:hover { text-decoration:underline; }
-    .topbar-left,.topbar-right { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+.topbar { background: #FFA040; color: #000000; padding: 10px 0; border-bottom: 1px solid #E6A800; }
+.topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+.topbar a { color: #FFFFFF; text-decoration: none; font-size: 1rem; font-weight: 500; }
+.topbar a:hover { text-decoration: underline; color: #333333; }
+.topbar-left, .topbar-right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 1rem; font-weight: 600; color: #FFFFFF; }
 
     /* ── HEADER ── */
-    header { background:var(--white); border-bottom:2px solid var(--border); position:sticky; top:0; z-index:1000; box-shadow:0 2px 12px rgba(13,33,55,0.08); }
+    header { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(13,33,55,0.08); }
     .header-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
-    .logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
-    .logo-icon { width:48px; height:48px; background:var(--navy); border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--gold); font-weight:700; flex-shrink:0; }
-	.logo-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--navy); font-weight: 700; }
+    .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-icon { width: 48px; height: 48px; background: var(--navy); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+	.logo-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--navy); font-weight: 700; }
     .logo-text span { font-size: 0.72rem; color: #374151; letter-spacing: 0.04em; text-transform: uppercase; }
-    nav { display:flex; align-items:center; gap:4px; }
-    nav a { font-size:0.88rem; font-weight:500; color:var(--navy); text-decoration:none; padding:8px 14px; border-radius:6px; transition:background .2s,color .2s; white-space:nowrap; }
-    nav a:hover, nav a.active { background:var(--light); color:var(--gold); }
-    .dropdown { position:relative; }
-    .dropdown>a::after { content:' ▾'; font-size:0.7rem; }
-    .dropdown-menu { display:none; position:absolute; top:calc(100% + 8px); left:0; background:var(--white); border:1px solid var(--border); border-radius:10px; box-shadow:0 8px 30px rgba(13,33,55,0.12); min-width:230px; padding:8px 0; z-index:999; }
-    .dropdown:hover .dropdown-menu { display:block; }
-    .dropdown-menu a { display:block; padding:10px 20px; font-size:0.85rem; color:var(--text); border-left:3px solid transparent; border-radius:0; }
-    .dropdown-menu a:hover, .dropdown-menu a.active { background:var(--light); border-left-color:var(--gold); color:var(--navy); }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { font-size: 1rem; font-weight: 500; color: var(--navy); text-decoration: none; padding: 8px 14px; border-radius: 6px; transition: background 0.2s, color 0.2s; white-space: nowrap; }
+    nav a:hover, nav a.active { background: var(--light); color: var(--gold); }
+    .dropdown { position: relative; }
+    .dropdown > a::after { content: ' ▾'; font-size: 0.7rem; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: var(--white); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 30px rgba(13,33,55,0.12); min-width: 230px; padding: 8px 0; z-index: 999; }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 10px 20px; font-size: 1rem; color: var(--text); border-left: 3px solid transparent; border-radius: 0; }
+    .dropdown-menu a:hover { background: var(--light); border-left-color: var(--gold); color: var(--navy); }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; background:none; border:none; }
 	.hamburger span { display:block; width:24px; height:2px; background:var(--navy); border-radius:2px; transition:all .3s; }
     .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
@@ -69,9 +77,9 @@
     .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
 	.mobile-nav { display:none; background:var(--white); border-top:1px solid var(--border); padding:12px 24px 20px; max-height:320px; overflow-y:auto; }
     .mobile-nav.open { display:block; }
-    .mobile-nav a { display:block; padding:11px 0; font-size:0.92rem; font-weight:500; color:var(--navy); text-decoration:none; border-bottom:1px solid var(--border); }
-    .mobile-nav a:last-child { border-bottom:none; }
-    .mobile-nav a:hover { color:var(--gold); }
+    .mobile-nav a { display: block; padding: 11px 0; font-size: 0.92rem; font-weight: 500; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--border); }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--gold); }
 
     /* ── BREADCRUMB ── */
     .breadcrumb-bar { background:var(--light); border-bottom:1px solid var(--border); padding:10px 0; }
@@ -82,14 +90,14 @@
     .breadcrumb-inner .current { color:var(--gold); font-weight:600; }
 
     /* ── SERVICE HERO ── */
-    .service-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#1a4a7a 100%); padding:28px 16px 24px; position:relative; overflow:hidden; }
-    .service-hero::before { content:''; position:absolute; right:-80px; top:-80px; width:360px; height:360px; border-radius:50%; background:rgba(201,168,76,0.07); }
-    .service-hero-inner { max-width:100%; margin:0 auto; position:relative; z-index:1; }
-    .service-hero-tag { display:inline-block; background:rgba(201,168,76,0.18); color:var(--gold2); font-size:0.78rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:5px 14px; border-radius:20px; margin-bottom:16px; border:1px solid rgba(201,168,76,0.3); }
-    .service-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); color:var(--white); font-weight:700; margin-bottom:14px; line-height:1.2; }
-    .service-hero h1 span { color:var(--gold2); }
-    .service-hero p { font-size:1rem; color:#aec6df; max-width:100%; line-height:1.7; margin-bottom:28px; }
-    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; }
+.service-hero { background: #F8F8F8; padding: 28px 16px 24px; position: relative; overflow: hidden; }
+.service-hero::before, .hero::after { display: none; }
+.service-hero-inner { max-width: 100%; margin: auto; padding: 0; }
+.service-hero-tag { display: inline-block; background: #FFFFFF; color: #FFA040; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 7px 18px; border-radius: 20px; margin-bottom: 18px; border: 2px solid #FFA040; }
+.service-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 700; line-height: 1.2; margin-bottom: 18px; color: #000000; }
+.service-hero h1 span { color: #FFA040; }
+.service-hero p { font-size: 1.08rem; color: #374151; line-height: 1.85; margin-bottom: 32px; max-width: 100%; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn { display:inline-block; padding:12px 28px; border-radius:8px; font-size:0.92rem; font-weight:600; cursor:pointer; text-decoration:none; transition:all .25s; border:none; }
     .btn-gold { background:var(--gold); color:var(--navy); }
     .btn-gold:hover { background:var(--gold2); transform:translateY(-1px); }
@@ -108,49 +116,50 @@
     .check-list li:last-child { border-bottom:none; }
     .check-list li::before { content:'✓'; position:absolute; left:0; color:var(--gold); font-weight:700; }
     .step-list { list-style:none; margin-bottom:24px; counter-reset:steps; }
-    .step-list li { font-size:0.92rem; color:#4b5563; padding:10px 0 10px 40px; position:relative; border-bottom:1px solid var(--border); line-height:1.5; counter-increment:steps; }
+    .step-list li { font-size:1rem; color:#4b5563; padding:10px 0 10px 40px; position:relative; border-bottom:1px solid var(--border); line-height:1.5; counter-increment:steps; }
     .step-list li:last-child { border-bottom:none; }
     .step-list li::before { content:counter(steps); position:absolute; left:0; top:8px; width:26px; height:26px; background:var(--navy); color:var(--gold); font-size:0.78rem; font-weight:700; border-radius:50%; display:flex; align-items:center; justify-content:center; }
     .info-box { background:var(--light); border-left:4px solid var(--gold); border-radius:0 8px 8px 0; padding:16px 20px; margin:20px 0; font-size:0.88rem; color:#4b5563; line-height:1.6; }
     .divider { border:none; border-top:2px solid var(--border); margin:32px 0; }
+	
 	
     /* service offering cards */
     .service-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:28px; }
     .service-card { border:1px solid var(--border); border-radius:10px; padding:20px; background:var(--white); transition:box-shadow .2s, border-color .2s; }
     .service-card:hover { box-shadow:0 4px 20px rgba(13,33,55,0.08); border-color:var(--gold); }
     .service-card .svc-icon { font-size:1.6rem; margin-bottom:10px; display:block; }
-    .service-card h4 { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--navy); margin-bottom:8px; }
-    .service-card p { font-size:0.94rem; color:#4b5563; line-height:1.6; margin:0; }
+    .service-card h4 { font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--navy); margin-bottom:8px; }
+    .service-card p { font-size:1rem; color:#4b5563; line-height:1.6; margin:0; }
     @media (max-width:600px) { .service-grid { grid-template-columns:1fr; } }
 
     /* who we serve */
     .client-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:28px; }
-    .client-pill { background:var(--light); border:1px solid var(--border); border-radius:8px; padding:12px 14px; text-align:center; font-size:0.83rem; color:var(--navy); font-weight:500; line-height:1.4; }
+    .client-pill { background:var(--light); border:1px solid var(--border); border-radius:8px; padding:12px 14px; text-align:center; font-size:1rem; color:var(--navy); font-weight:500; line-height:1.4; }
     .client-pill span { display:block; font-size:1.2rem; margin-bottom:5px; }
     @media (max-width:600px) { .client-grid { grid-template-columns:1fr 1fr; } }
 
     /* software badges */
     .software-row { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px; }
-    .sw-badge { background:var(--navy); color:var(--gold2); font-size:0.8rem; font-weight:600; padding:6px 16px; border-radius:20px; letter-spacing:0.03em; }
+    .sw-badge { background:#FFA040; color:#000000; font-size:0.92rem; font-weight:600; padding:6px 16px; border-radius:20px; letter-spacing:0.03em; }
 
     /* ── SIDEBAR ── */
     .service-sidebar { display:flex; flex-direction:column; gap:24px; }
     .sidebar-card { background:var(--white); border:1px solid var(--border); border-radius:12px; padding:24px; box-shadow:0 2px 12px rgba(13,33,55,0.05); }
     .sidebar-card h4 { font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--navy); margin-bottom:16px; padding-bottom:10px; border-bottom:1px solid var(--border); }
-    .office-badge { display:inline-block; background:var(--light); border:1px solid var(--border); border-radius:6px; font-size:0.85rem; font-weight:600; color:var(--navy); padding:3px 10px; margin-bottom:8px; }
-    .contact-detail { font-size:0.9rem; color:var(--gray); margin-bottom:8px; display:flex; gap:8px; align-items:flex-start; line-height:1.5; }
-    .contact-detail a { color:var(--navy); text-decoration:none; font-weight:500; }
+    .office-badge { display:inline-block; background:#FFA040; border:1px solid var(--border); border-radius:6px; font-size:1rem; font-weight:600; color:#FFFFFF; padding:3px 10px; margin-bottom:8px; }
+    .contact-detail { font-size:0.9rem; color:#000000; margin-bottom:8px; display:flex; gap:8px; align-items:flex-start; line-height:1.5; }
+    .contact-detail a { font-size:0.9rem; color:var(--navy); text-decoration:none; font-weight:500; }
     .contact-detail a:hover { color:var(--gold); }
     .cta-card { background:linear-gradient(135deg,var(--navy),var(--navy2)); border:none; color:var(--white); text-align:center; }
-    .cta-card h4 { color:var(--gold2); border-bottom-color:rgba(255,255,255,0.1); }
-    .cta-card p { font-size:0.85rem; color:#aec6df; margin-bottom:16px; }
+    .cta-card h4 { font-size:1.2rem; color:var(--gold2); border-bottom-color:rgba(255,255,255,0.1); }
+    .cta-card p { font-size:0.92rem; color:#FFFFFF; margin-bottom:16px; }
     .btn-cta { display:block; width:100%; padding:12px; background:var(--gold); color:var(--navy); border:none; border-radius:8px; font-size:0.9rem; font-weight:600; text-align:center; text-decoration:none; cursor:pointer; transition:all .2s; }
     .btn-cta:hover { background:var(--gold2); }
     .sidebar-services ul { list-style:none; }
     .sidebar-services ul li { margin-bottom:4px; }
-    .sidebar-services ul li a { display:flex; align-items:center; gap:8px; padding:9px 12px; border-radius:8px; font-size:0.84rem; color:var(--text); text-decoration:none; transition:all .2s; border:1px solid transparent; }
+    .sidebar-services ul li a { display:flex; align-items:center; gap:8px; padding:9px 12px; border-radius:8px; font-size:1rem; color:var(--text); text-decoration:none; transition:all .2s; border:1px solid transparent; }
     .sidebar-services ul li a::before { content:'›'; color:var(--gold); font-size:1rem; }
-    .sidebar-services ul li a:hover { background:var(--light); border-color:var(--border); }
+    .sidebar-services ul li a:hover { background:#FFA040; border-color:var(--border); }
     .sidebar-services ul li a.active { background:var(--navy); color:var(--white); }
     .sidebar-services ul li a.active::before { color:var(--gold2); }
 
@@ -173,20 +182,25 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width:900px) {
-      nav { display:none; } .hamburger { display:flex; }
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .service-hero-inner { grid-template-columns: 1fr; padding: 0 16px; }
       .service-layout { grid-template-columns:1fr; padding:0 10px; }
       .service-sidebar { order:-1; }
-      .footer-inner { grid-template-columns:1fr 1fr; gap:32px; }
-	  .footer-inner { padding: 0 16px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; padding: 0 16px; }
 	  .topbar-inner { padding: 0 16px; }
-	  .header-inner { padding: 0 16px; }
+      .header-inner { padding: 0 16px; }
+      .section-inner { padding: 0; }
     }
     @media (max-width:560px) {
-      .footer-inner { grid-template-columns:1fr; }
-      .topbar-right { display:none; }
-	  .footer-inner { padding: 0 12px; }
+	  .hero { padding: 28px 4px 24px; }
+      .footer-inner { grid-template-columns: 1fr; padding: 0 12px; }
+      .topbar-inner { flex-direction: column; text-align: center; }
+	  .topbar-left, .topbar-right { display: flex; justify-content: center; }
 	  .topbar-inner { padding: 0 12px; }
-	  .header-inner { padding: 0 12px; }
+      .header-inner { padding: 0 12px; }
+      .service-hero-inner { padding: 0 6px; }
+      .section-inner { padding: 0; }
     }
 
 .dropdown-sub {
@@ -951,7 +965,7 @@
     <!-- SERVICE HERO -->
     <div class="service-hero">
       <div class="service-hero-inner">
-        <div class="service-hero-tag">Our Services</div>
+        <div class="hero-left">
         <h1>Accounting Services <span>in Ranihati Howrah West Bengal</span></h1>
         <p>Keep your books accurate, your cash flows clear, and your 
 business compliant — all year round. Bharat Tax Consultants 
@@ -961,9 +975,10 @@ Ranihati, Howrah and West Bengal.</p>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-gold">Get Free Consultation</a>
         </div>
+		</div>
       </div>
     </div>
-
+	
     <!-- TWO-COLUMN LAYOUT -->
     <div class="service-layout">
 
@@ -1097,19 +1112,19 @@ Ranihati, Howrah and West Bengal.</p>
         <!-- FAQ -->
         <h3>Frequently Asked Questions</h3>
 
-        <h3 style="font-size:1.05rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:600; color:var(--navy);">Who is legally required to maintain books of accounts?</h3>
+        <h3 style="font-size:1.2rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:700; color:#FFA040;">Who is legally required to maintain books of accounts?</h3>
         <p>Under the Income Tax Act, 1961, every person carrying on business or profession is required to maintain books of accounts if their income exceeds ₹2.5 lakhs or total sales/turnover exceeds ₹25 lakhs in any of the three preceding years. Companies registered under the Companies Act are always required to maintain proper books. Under GST, all registered taxpayers must maintain prescribed accounts and records.</p>
 
-        <h3 style="font-size:1.05rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:600; color:var(--navy);">How do I share my documents with you?</h3>
+        <h3 style="font-size:1.2rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:700; color:#FFA040;">How do I share my documents with you?</h3>
         <p>We offer multiple convenient options. You can share physical documents at our Howrah or Kolkata office, or send soft copies via WhatsApp, email, or a shared Google Drive / Dropbox folder. For Tally users, we can also work directly on your company data file. We adapt to whatever is most convenient for you.</p>
 
-        <h3 style="font-size:1.05rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:600; color:var(--navy);">What is the difference between bookkeeping and accounting?</h3>
+        <h3 style="font-size:1.2rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:700; color:#FFA040;">What is the difference between bookkeeping and accounting?</h3>
         <p>Bookkeeping is the day-to-day recording of financial transactions — entries in ledgers, cash books, purchase and sales registers. Accounting is the broader process that includes summarising, analysing, and reporting this data through financial statements, ratios, and management reports. We provide both as part of our integrated service.</p>
 
-        <h3 style="font-size:1.05rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:600; color:var(--navy);">Can you take over accounts that are in a mess or not updated for months?</h3>
+        <h3 style="font-size:1.2rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:700; color:#FFA040;">Can you take over accounts that are in a mess or not updated for months?</h3>
         <p>Absolutely — this is one of the most common situations we handle. We first conduct a thorough review of the backlog, identify missing documents, reconstruct transactions from bank statements and invoices, and bring your books fully up to date. We have helped many businesses recover years of pending accounts quickly and cleanly.</p>
 
-        <h3 style="font-size:1.05rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:600; color:var(--navy);">How much does your accounting service cost?</h3>
+        <h3 style="font-size:1.2rem; margin-top:20px; font-family:'DM Sans',sans-serif; font-weight:700; color:#FFA040;">How much does your accounting service cost?</h3>
         <p>Our fees are based on the volume of transactions, complexity of the business, and the scope of services required. We offer flexible monthly retainer packages suitable for small proprietorships, partnership firms, and Private Limited Companies. Contact us for a free consultation and we will provide a transparent, no-obligation quote tailored to your business.</p>
 
       </div>
@@ -1146,21 +1161,21 @@ Ranihati, Howrah and West Bengal.</p>
           <form id="enquiryForm" onsubmit="submitEnquiry(event)" novalidate>
 
             <div style="margin-bottom:14px;">
-              <label for="eq-name" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Full Name <span style="color:#c9a84c;">*</span></label>
+              <label for="eq-name" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Full Name <span style="color:#FFA040;">*</span></label>
               <input type="text" id="eq-name" placeholder="E.g. Rahul Sharma" required
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;"
                 oninput="autoCapitalise(this)"
-                onfocus="this.style.borderColor='#c9a84c'"
+                onfocus="this.style.borderColor='#FFA040'"
                 onblur="this.style.borderColor='#dce3ed'"/>
               <span id="err-name" style="font-size:0.75rem;color:#dc2626;display:none;">Please enter first and last name.</span>
             </div>
 
             <div style="margin-bottom:14px;">
-              <label for="eq-phone" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Phone Number <span style="color:#c9a84c;">*</span></label>
+              <label for="eq-phone" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Phone Number <span style="color:#FFA040;">*</span></label>
               <input type="tel" id="eq-phone" placeholder="10-digit mobile number" required maxlength="10"
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;"
                 oninput="this.value=this.value.replace(/[^0-9]/g,'')"
-                onfocus="this.style.borderColor='#c9a84c'"
+                onfocus="this.style.borderColor='#FFA040'"
                 onblur="this.style.borderColor='#dce3ed'"/>
               <span id="err-phone" style="font-size:0.75rem;color:#dc2626;display:none;">Please enter a valid 10-digit number.</span>
             </div>
@@ -1169,16 +1184,16 @@ Ranihati, Howrah and West Bengal.</p>
               <label for="eq-email" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Email Address <span style="color:#6b7280;font-weight:400;font-size:0.72rem;">(Optional)</span></label>
               <input type="email" id="eq-email" placeholder="yourname@email.com"
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;"
-                onfocus="this.style.borderColor='#c9a84c'"
+                onfocus="this.style.borderColor='#FFA040'"
                 onblur="this.style.borderColor='#dce3ed'"/>
               <span id="err-email" style="font-size:0.75rem;color:#dc2626;display:none;">Please enter a valid email address.</span>
             </div>
 
             <div style="margin-bottom:14px;">
-              <label for="eq-service" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Service Required <span style="color:#c9a84c;">*</span></label>
+              <label for="eq-service" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Service Required <span style="color:#FFA040;">*</span></label>
               <select id="eq-service" required
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;background:#fff;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 12 12%22><path fill=%22%236b7280%22 d=%22M6 8L1 3h10z%22/></svg>');background-repeat:no-repeat;background-position:right 12px center;"
-                onfocus="this.style.borderColor='#c9a84c'"
+                onfocus="this.style.borderColor='#FFA040'"
                 onblur="this.style.borderColor='#dce3ed'">
                 <option value="">-- Select a Service --</option>
                 <option>GST Registration</option>
@@ -1197,10 +1212,10 @@ Ranihati, Howrah and West Bengal.</p>
             </div>
 
             <div style="margin-bottom:14px;">
-              <label for="eq-office" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Preferred Office <span style="color:#c9a84c;">*</span></label>
+              <label for="eq-office" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Preferred Office <span style="color:#FFA040;">*</span></label>
               <select id="eq-office" required
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;background:#fff;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 12 12%22><path fill=%22%236b7280%22 d=%22M6 8L1 3h10z%22/></svg>');background-repeat:no-repeat;background-position:right 12px center;"
-                onfocus="this.style.borderColor='#c9a84c'"
+                onfocus="this.style.borderColor='#FFA040'"
                 onblur="this.style.borderColor='#dce3ed'">
                 <option value="">-- Select Office --</option>
                 <option>Kolkata (Administrative Office)</option>
@@ -1213,16 +1228,16 @@ Ranihati, Howrah and West Bengal.</p>
               <label for="eq-message" style="display:block;font-size:0.78rem;font-weight:600;color:#0d2137;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">Your Message <span style="color:#6b7280;font-weight:400;font-size:0.72rem;">(Max 500 characters)</span></label>
               <textarea id="eq-message" rows="4" maxlength="500" placeholder="Tell us briefly about your requirement..."
                 style="width:100%;padding:9px 12px;border:1px solid #dce3ed;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e293b;outline:none;transition:border .2s;resize:vertical;"
-                onfocus="this.style.borderColor='#c9a84c'"
+                onfocus="this.style.borderColor='#FFA040'"
                 onblur="this.style.borderColor='#dce3ed'"
                 oninput="document.getElementById('eq-charcount').textContent=this.value.length"></textarea>
               <div style="text-align:right;font-size:0.72rem;color:#6b7280;margin-top:3px;"><span id="eq-charcount">0</span> / 500</div>
             </div>
 
             <button type="submit"
-              style="width:100%;padding:11px;background:#c9a84c;color:#0d2137;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.92rem;font-weight:600;cursor:pointer;transition:background .2s;"
-              onmouseover="this.style.background='#e8c96a'"
-              onmouseout="this.style.background='#c9a84c'">
+              style="width:100%;padding:11px;background:#FFA040;color:#0d2137;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.92rem;font-weight:600;cursor:pointer;transition:background .2s;"
+              onmouseover="this.style.background='#FF8C1A'"
+              onmouseout="this.style.background='#FFA040'">
               Send Enquiry →
             </button>
 
@@ -1314,7 +1329,7 @@ Ranihati, Howrah and West Bengal.</p>
 		<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 		<div style="margin-top:8px; color:#8aafc9; font-size:0.82rem; font-weight:500;">
         Engineered &amp; Maintained by &nbsp;
-        <a href="https://odelya.online" target="_blank" rel="noopener" style="color:#e8c96a; text-decoration:none; font-weight:700; display:inline-flex; align-items:center; gap:5px;">
+        <a href="https://odelya.online" target="_blank" rel="noopener" style="color:#FF8C1A; text-decoration:none; font-weight:700; display:inline-flex; align-items:center; gap:5px;">
           <img src="images/odelya-logo.webp" alt="odelya.online" style="height:16px; width:auto; vertical-align:middle;"/>
           https://odelya.online
         </a>
