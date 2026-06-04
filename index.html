@@ -51,9 +51,9 @@
 /* ── TOPBAR ── */
 .topbar { background: #FFA040; color: #000000; padding: 10px 0; border-bottom: 1px solid #E6A800; }
 .topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
-.topbar a { color: #FFFFFF; text-decoration: none; font-size: 1rem; font-weight: 500; }
-.topbar a:hover { text-decoration: underline; color: #333333; }
-.topbar-left, .topbar-right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 1rem; font-weight: 600; color: #FFFFFF; }
+.topbar a { color: #FFFFFF; text-decoration: none; font-size: 1.2rem; font-weight: 600; }
+.topbar a:hover { text-decoration: none; color: #333333; }
+.topbar-left, .topbar-right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 1.2rem; font-weight: 600; color: #FFFFFF; }
 
     /* ── HEADER ── */
     header { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(13,33,55,0.08); }
@@ -83,7 +83,6 @@
     .mobile-nav a:hover { color: var(--gold); }
 
 /* ── HERO ── */
-
 .hero { background: #F8F8F8; padding: 28px 16px 24px; position: relative; overflow: hidden; }
 .hero::before, .hero::after { display: none; }
 .hero-inner { max-width: 100%; margin: auto; padding: 0; display: grid; grid-template-columns: 1.8fr 0.4fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
@@ -103,14 +102,14 @@
     .section-header { text-align: center; margin-bottom: 48px; }
     .section-tag { display: inline-block; background: #FFFFFF; color: #FFA040; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 14px; border: 3px solid #FFA040; }
 	.section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 3.5vw, 2.6rem); color: #0a1a2e; margin-bottom: 14px; }
-    .section-header p { color: #374151; font-size: 1.05rem; max-width: 100%; margin: auto; line-height: 1.8; }
+    .section-header p { color: #374151; font-size: 1.1rem; max-width: 100%; margin: auto; line-height: 1.8; }
 	.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .service-card { background: var(--white); border: 2px solid var(--border); border-radius: 14px; padding: 20px 20px; text-align: left; transition: all 0.3s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
-    .service-card:hover { border-color: var(--gold); box-shadow: 0 8px 32px rgba(13,33,55,0.12); transform: translateY(-4px); }
+    .service-card:hover { border-color: var(--gold); box-shadow: 0 8px 12px rgba(13,33,55,0.12); transform: translateY(-4px); }
     .service-card .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
 	.service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #0a1a2e; margin-bottom: 10px; }
-    .service-card p { font-size: 1rem; color: #374151; line-height: 1.7; margin-bottom: 14px; }
-    .service-card .link { font-size: 1rem; color: #FFA040; font-weight: 600; }
+    .service-card p { font-size: 1.1rem; color: #374151; line-height: 1.7; margin-bottom: 14px; }
+    .service-card .link { font-size: 1.1rem; color: #FFA040; font-weight: 600; }
 
     /* ── ABOUT SNIPPET ── */
     .about-section { background: var(--light); }
@@ -185,7 +184,10 @@
       .why-grid { grid-template-columns: repeat(3, 1fr); }
       .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
       .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; padding: 0 16px; }
-	  .topbar-inner { padding: 0 16px; }
+	  .topbar a { font-size: 1rem; font-weight: 500; }
+	  .topbar a:hover { text-decoration: none; color: #333333; }
+	  .topbar-left, .topbar-right { display: flex; justify-content: center; }
+      .topbar-inner { padding: 0 12px; flex-direction: column; text-align: center; }
       .header-inner { padding: 0 16px; }
       .section-inner { padding: 0; }
       .about-inner { padding: 56px 16px; }
@@ -198,9 +200,10 @@
       .hero-stats { grid-template-columns: repeat(3, 1fr); }
 	  .testimonials-grid { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; padding: 0 12px; }
-      .topbar-inner { flex-direction: column; text-align: center; }
+	  .topbar a { font-size: 1rem; font-weight: 500; }
+	  .topbar a:hover { text-decoration: none; color: #333333; }
 	  .topbar-left, .topbar-right { display: flex; justify-content: center; }
-	  .topbar-inner { padding: 0 12px; }
+      .topbar-inner { padding: 0 12px; flex-direction: column; text-align: center; }
       .header-inner { padding: 0 12px; }
       .hero-inner { padding: 0 6px; }
       .section-inner { padding: 0; }
@@ -695,7 +698,7 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-left">
-        <span>📍 Administrative Office: Kolkata &nbsp;|&nbsp; Branch: Howrah</span>
+        <span>📍 Office: Kolkata &amp; Howrah</span>
       </div>
       <div class="topbar-right">
 		<span>📞 <a href="tel:+918100180080">+91-8100180080</a></span>
