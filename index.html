@@ -48,12 +48,10 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); min-height: 100vh; display: flex; flex-direction: column; }
 
-/* ── TOPBAR ── */
-.topbar { background: #FFA040; color: #000000; padding: 10px 0; border-bottom: 1px solid #E6A800; }
-.topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
-.topbar a { color: #FFFFFF; font-size: 1rem; font-weight: 500; }
-.topbar a:hover { text-decoration: none; color: #333333; }
-.topbar-left, .topbar-right { display: flex; gap: 30px; align-items: center; flex-wrap: wrap; font-size: 1rem; font-weight: 600; color: #FFFFFF; }
+/* TOPBAR */
+.topbar { background: #FFA040; border-bottom: 1px solid #E6A800; padding: 10px 0; }
+.topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; }
+.topbar-left, .topbar-right { font-size: 1.2rem; font-weight: 600; color: #ffffff; }
 
     /* ── HEADER ── */
     header { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(13,33,55,0.08); }
@@ -184,10 +182,8 @@
       .why-grid { grid-template-columns: repeat(3, 1fr); }
       .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
       .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; padding: 0 16px; }
-	  .topbar a { font-size: 0.8rem; font-weight: 500; }
-	  .topbar a:hover { text-decoration: none; color: #333333; }
-	  .topbar-left, .topbar-right { display: flex; justify-content: center; font-size: 1rem; font-weight: 600; }
-      .topbar-inner { padding: 0 12px; flex-direction: column; text-align: center; }
+	  .topbar-inner { flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+	  .topbar-left, .topbar-right { font-size: 1rem; font-weight: 500; }
       .header-inner { padding: 0 16px; }
       .section-inner { padding: 0; }
       .about-inner { padding: 56px 16px; }
@@ -200,10 +196,8 @@
       .hero-stats { grid-template-columns: repeat(3, 1fr); }
 	  .testimonials-grid { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; padding: 0 12px; }
-	  .topbar a { font-size: 0.8rem; font-weight: 500; }
-	  .topbar a:hover { text-decoration: none; color: #333333; }
-	  .topbar-left, .topbar-right { display: flex; justify-content: center; font-size: 1rem; font-weight: 600; }
-      .topbar-inner { padding: 0 12px; flex-direction: column; text-align: center; }
+	  .topbar-inner { flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 0 20px; }
+	  .topbar-left, .topbar-right { font-size: 1rem; font-weight: 500; }
       .header-inner { padding: 0 12px; }
       .hero-inner { padding: 0 6px; }
       .section-inner { padding: 0; }
@@ -696,15 +690,11 @@
        [UPDATE] Phone number and email
        ══════════════════════════════════════ -->
 <div class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">
-        <span>Office: Kolkata &amp; Howrah</span>
-      </div>
-      <div class="topbar-right">
-		<span>Ph: +91-8100180080</span>
-      </div>
-    </div>
+  <div class="topbar-inner">
+    <span class="topbar-left">Office: Kolkata &amp; Howrah</span>
+    <span class="topbar-right">Ph: +91-8100180080</span>
   </div>
+</div>
 
   <!-- ══════════════════════════════════════
        HEADER & NAVIGATION
