@@ -128,11 +128,11 @@
 
     /* ── CONTACT FORM ── */
     .contact-form-wrap { background:var(--white); border:1px solid var(--border); border-radius:16px; padding:40px 10px; box-shadow:0 4px 24px rgba(13,33,55,0.07); marging: 20px;}
-    .contact-form-wrap h3 { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--navy); margin-bottom:6px; }
-    .contact-form-wrap p { font-size:0.86rem; color:var(--gray); margin-bottom:28px; }
+    .contact-form-wrap h3 { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--navy); margin-bottom:6px; }
+    .contact-form-wrap p { font-size:1rem; color:var(--gray); margin-bottom:28px; }
     .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
     .form-group { margin-bottom:18px; }
-    .form-group label { display:block; font-size:0.82rem; font-weight:600; color:var(--navy); margin-bottom:6px; letter-spacing:0.02em; }
+    .form-group label { display:block; font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:6px; letter-spacing:0.02em; }
     .form-group input,
     .form-group select,
     .form-group textarea {
@@ -154,15 +154,15 @@
     /* ── SIDEBAR INFO ── */
     .contact-sidebar { display:flex; flex-direction:column; gap:24px; }
     .info-card { background:var(--white); border:1px solid var(--border); border-radius:14px; padding:28px 24px; }
-    .info-card h4 { font-family:'Playfair Display',serif; font-size:1rem; color:var(--navy); margin-bottom:18px; padding-bottom:10px; border-bottom:1px solid var(--border); }
+    .info-card h4 { font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--navy); margin-bottom:18px; padding-bottom:10px; border-bottom:1px solid var(--border); }
     .info-row { display:flex; align-items:flex-start; gap:12px; margin-bottom:14px; }
     .info-icon { width:36px; height:36px; background:var(--light); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
-    .info-row .info-text strong { display:block; font-size:0.82rem; color:var(--navy); font-weight:600; margin-bottom:2px; }
+    .info-row .info-text strong { display:block; font-size:1rem; color:var(--navy); font-weight:600; margin-bottom:2px; }
     .info-row .info-text span { font-size:0.84rem; color:var(--gray); line-height:1.5; }
     .info-row .info-text a { color:var(--navy); text-decoration:none; font-weight:500; }
     .info-row .info-text a:hover { color:var(--gold); }
     .hours-list { list-style:none; }
-    .hours-list li { display:flex; justify-content:space-between; font-size:0.84rem; padding:7px 0; border-bottom:1px solid var(--border); color:var(--gray); }
+    .hours-list li { display:flex; justify-content:space-between; font-size:1rem; padding:7px 0; border-bottom:1px solid var(--border); color:var(--gray); }
     .hours-list li:last-child { border-bottom:none; }
     .hours-list li span { color:var(--navy); font-weight:500; }
 
@@ -886,18 +886,20 @@ will respond within 24 hours.</p>
                 <label for="service">Select Service</label>
                 <select id="service">
                   <option value="">-- Select a Service --</option>
-                  <option>GST Registration</option>
-                  <option>GST Return Filing</option>
-                  <option>Income Tax Return</option>
-                  <option>TDS Return</option>
-                  <option>Company Registration</option>
-                  <option>Partnership Registration</option>
-                  <option>Accounting Services</option>
-				  <option>Trademark Registration</option>
-				  <option>Food License (FSSAI)</option>
-                  <option>General Enquiry</option>
-				  <option>Mutual Fund Investment</option>
-				  <option>Stock Market & Commodity</option>
+                <option>GST Registration</option>
+                <option>GST Return Filing</option>
+                <option>Income Tax</option>
+                <option>TDS / TCS</option>
+                <option>Company Registration</option>
+                <option>Firm / Society / Trust</option>
+                <option>Accounting</option>
+                <option>Trademark Registration</option>
+                <option>Food License (FSSAI)</option>
+				<option>P. Tax / Trade License</option>
+				<option>DSC / Loan / Project Report</option>
+				<option>Mutual Fund</option>
+				<option>Stock Market</option>
+
                 </select>
               </div>
               <div class="form-group">
@@ -978,15 +980,17 @@ will respond within 24 hours.</p>
               <ul class="hours-list">
                 <li><a href="gst-registration.html" style="color:var(--navy);text-decoration:none;">GST Registration</a> <span>→</span></li>
                 <li><a href="gst-return-filing.html" style="color:var(--navy);text-decoration:none;">GST Return Filing</a> <span>→</span></li>
-                <li><a href="income-tax-return.html" style="color:var(--navy);text-decoration:none;">Income Tax Return</a> <span>→</span></li>
-                <li><a href="tds-return.html" style="color:var(--navy);text-decoration:none;">TDS Return</a> <span>→</span></li>
+                <li><a href="income-tax-return.html" style="color:var(--navy);text-decoration:none;">Income Tax</a> <span>→</span></li>
+                <li><a href="tds-return.html" style="color:var(--navy);text-decoration:none;">TDS / TCS</a> <span>→</span></li>
                 <li><a href="company-registration.html" style="color:var(--navy);text-decoration:none;">Company Registration</a> <span>→</span></li>
-                <li><a href="partnership-registration.html" style="color:var(--navy);text-decoration:none;">Partnership Registration</a> <span>→</span></li>
-                <li><a href="accounting.html" style="color:var(--navy);text-decoration:none;">Accounting Services</a> <span>→</span></li>
+                <li><a href="partnership-registration.html" style="color:var(--navy);text-decoration:none;">Firm / Society / Trust</a> <span>→</span></li>
+                <li><a href="accounting.html" style="color:var(--navy);text-decoration:none;">Accounting</a> <span>→</span></li>
 				<li><a href="trademark-registration.html" style="color:var(--navy);text-decoration:none;">Trademark Registration</a> <span>→</span></li>
 				<li><a href="food-license.html" style="color:var(--navy);text-decoration:none;">Food License (FSSAI)</a> <span>→</span></li>
-				<li><a href="mutual-fund.html" style="color:var(--navy);text-decoration:none;">Mutual Fund Investment</a> <span>→</span></li>
-				<li><a href="stock-market.html" style="color:var(--navy);text-decoration:none;">Stock Market & Commodity</a> <span>→</span></li>
+				<li><a href="ptaxtrade.html" style="color:var(--navy);text-decoration:none;">P. Tax / Trade License</a> <span>→</span></li>
+				<li><a href="dscloanproject.html" style="color:var(--navy);text-decoration:none;">DSC / Loan / Project Report</a> <span>→</span></li>
+				<li><a href="mutual-fund.html" style="color:var(--navy);text-decoration:none;">Mutual Fund</a> <span>→</span></li>
+				<li><a href="stock-market.html" style="color:var(--navy);text-decoration:none;">Stock Market</a> <span>→</span></li>
               </ul>
             </div>
 
@@ -1111,16 +1115,16 @@ will respond within 24 hours.</p>
       </div>
     </div>
 <div class="footer-bottom">
-      <div>© <span id="yr"></span> Bharat Tax Consultants. All rights reserved. &nbsp;|&nbsp; Administrative Office: Kolkata &nbsp;|&nbsp; Branch Office: Howrah</div>
-		<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
-		<div style="margin-top:8px; color:#8aafc9; font-size:0.82rem; font-weight:500;">
-        Engineered &amp; Maintained by &nbsp;
-        <a href="https://odelya.online" target="_blank" rel="noopener" style="color:#FF8C1A; text-decoration:none; font-weight:700; display:inline-flex; align-items:center; gap:5px;">
-          <img src="images/odelya-logo.webp" alt="odelya.online" style="height:16px; width:auto; vertical-align:middle;"/>
-          https://odelya.online
-        </a>
-      </div>
-    </div>
+  <div>© <span id="yr"></span> Bharat Tax Consultants. All rights reserved. &nbsp;|&nbsp; Administrative Office: Kolkata &nbsp;|&nbsp; Branch Office: Howrah</div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <div style="margin-top:8px; color:#8aafc9; font-size:0.82rem; font-weight:500; display:inline-flex; align-items:center; gap:6px;">
+    Engineered &amp; Maintained by &nbsp;
+    <a href="https://odelya.online" target="_blank" rel="noopener" style="color:#FF8C1A; text-decoration:none; font-weight:700; display:inline-flex; align-items:center; gap:5px;">
+      <img src="images/odelya-logo.webp" alt="odelya.online" style="height:16px; width:auto; vertical-align:middle;"/>
+      https://odelya.online
+    </a>
+  </div>
+</div>
   </footer>
 
 <!-- 1. Firebase init -->
