@@ -48,11 +48,9 @@
     body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); min-height: 100vh; display: flex; flex-direction: column; }
 
     /* ── TOPBAR ── */
-.topbar { background: #FFA040; color: #000000; padding: 10px 0; border-bottom: 1px solid #E6A800; }
-.topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
-.topbar a { color: #FFFFFF; text-decoration: none; font-size: 1rem; font-weight: 500; }
-.topbar a:hover { text-decoration: underline; color: #333333; }
-.topbar-left, .topbar-right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 1rem; font-weight: 600; color: #FFFFFF; }
+.topbar { background: #FFA040; border-bottom: 1px solid #E6A800; padding: 10px 0; }
+.topbar-inner { max-width: 100%; margin: auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; }
+.topbar-left, .topbar-right { font-size: 1.2rem; font-weight: 600; color: #ffffff; }
 
     /* ── HEADER ── */
     header { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(13,33,55,0.08); }
@@ -171,21 +169,21 @@
     @media (max-width:900px) {
       nav { display: none; }
       .hamburger { display: flex; }
+	  .topbar-inner { flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+	  .topbar-left, .topbar-right { font-size: 1.2rem; font-weight: 500; }
       .service-hero-inner { grid-template-columns: 1fr; padding: 0 16px; }
       .service-layout { grid-template-columns:1fr; padding:0 10px; }
       .service-sidebar { order:-1; }
       .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; padding: 0 16px; }
-	  .topbar-inner { padding: 0 16px; }
       .header-inner { padding: 0 16px; }
       .section-inner { padding: 0; }
 	  .itr-table { font-size:0.8rem; }
     }
     @media (max-width:560px) {
+	  .topbar-inner { flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 0 20px; }
+	  .topbar-left, .topbar-right { font-size: 1.2rem; font-weight: 500; }
 	  .hero { padding: 28px 4px 24px; }
       .footer-inner { grid-template-columns: 1fr; padding: 0 12px; }
-      .topbar-inner { flex-direction: column; text-align: center; }
-	  .topbar-left, .topbar-right { display: flex; justify-content: center; }
-	  .topbar-inner { padding: 0 12px; }
       .header-inner { padding: 0 12px; }
       .service-hero-inner { padding: 0 6px; }
       .section-inner { padding: 0; }
@@ -517,17 +515,12 @@
 
 <body>
 
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">
-        <span>📍 Administrative Office: Kolkata &nbsp;|&nbsp; Branch: Howrah</span>
-      </div>
-      <div class="topbar-right">
-		<span>📞 <a href="tel:+918100180080">+91-8100180080</a></span>
-		<span>✉ <a href="mailto:care.bharattax@gmail.com">care.bharattax@gmail.com</a></span>
-      </div>
-    </div>
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-left">Office: Kolkata &amp; Howrah</span>
+    <span class="topbar-right">Ph: +91-8100180080</span>
   </div>
+</div>
 
   <header>
     <div class="header-inner">
@@ -934,14 +927,14 @@ their financial goals and risk appetite.</p>
           <h4>📞 Contact Us</h4>
           <div class="office-badge">Administrative Office — Kolkata</div>
           <div class="contact-detail">👤 Shyamal Sen</div>
-          <div class="contact-detail">📞 <a href="tel:+91-9874295005">+91-9874295005</a></div>
-          <div class="contact-detail">✉ <a href="mailto:shyamalsen@gmail.com">shyamalsen@gmail.com</a></div>
+          <div class="contact-detail">📞 +91-9874295005</div>
+          <div class="contact-detail">✉ shyamalsen@gmail.com</div>
           <div class="contact-detail">📍 44E, Nandalal Mitra Lane, 2nd Floor, Kolkata, West Bengal-700040</div>
           <br/>
           <div class="office-badge">Branch Office — Howrah</div>
           <div class="contact-detail">👤 Manish Sau</div>
-          <div class="contact-detail">📞 <a href="tel:+91-8100180080">+91-8100180080</a></div>
-		  <div class="contact-detail">✉ <a href="mailto:care.bharattax@gmail.com">care.bharattax@gmail.com</a></div>
+          <div class="contact-detail">📞 +91-8100180080</div>
+		  <div class="contact-detail">✉ care.bharattax@gmail.com</div>
           <div class="contact-detail">📍 Room No 4, 2nd Floor, Aashirbad Complex, Ranihati, Nabghara, Biki Hakola, Howrah, West Bengal-711322</div>
         </div>
 
@@ -1012,14 +1005,14 @@ their financial goals and risk appetite.</p>
         <span class="footer-office-tag">Administrative Office</span>
         <p><strong>📍</strong> 44E, Nandalal Mitra Lane, 2nd Floor, Kolkata, West Benga-700040</p>
         <p><strong>👤</strong> Shyamal Sen</p>
-        <p><strong>📞</strong> <a href="tel:+91-9874295005" style="color:#FFFFFF;text-decoration:none;">+91-9874295005</a></p>
-        <p><strong>✉</strong> <a href="mailto:shyamalsen@gmail.com" style="color:#FFFFFF;text-decoration:none;">shyamalsen@gmail.com</a></p>		
+        <p><strong>📞</strong> +91-9874295005</p>
+        <p><strong>✉</strong> shyamalsen@gmail.com</p>		
         <br/>
         <span class="footer-office-tag">Branch Office</span>
         <p><strong>📍</strong> Room No 4, 2nd Floor, Aashirbad Complex, Ranihati, Nabghara, Biki Hakola, Howrah, West Bengal-711322</p>
         <p><strong>👤</strong> Manish Sau</p>
-        <p><strong>📞</strong> <a href="tel:+91-8100180080" style="color:#FFFFFF;text-decoration:none;">+91-8100180080</a></p>
-        <p><strong>✉</strong> <a href="mailto:care.bharattax@gmail.com" style="color:#FFFFFF;text-decoration:none;">care.bharattax@gmail.com</a></p>		
+        <p><strong>📞</strong> +91-8100180080</p>
+        <p><strong>✉</strong> care.bharattax@gmail.com</p>		
         <br/>
       </div>
     </div>
