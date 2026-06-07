@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /index.html
 Disallow: /admin.html
-
-User-agent: Applebot
-Allow: /
-
 Sitemap: https://bharattaxconsultants.com/sitemap.xml
